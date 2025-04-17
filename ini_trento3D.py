@@ -20,7 +20,7 @@ def run_jet_position(comment,cpuid,threadid,projectile,target, num_of_event, red
          '-e', '%s'%beam_energy, '-x', '%s'%cross_section, '-o', './events/%s/%s_%s.h5'%(comment,cpuid,threadid), \
          '--b-min','%s'%bmin,'--b-max','%s'%bmax, '--xy-max','%s'%grid_max,'--xy-step','%s'%grid_step, '--eta-max','%s'%eta_max, '--eta-step', '%s'%eta_step,\
         '--mean-coeff','%s'%mean_coeff,'--std-coeff','%s'%std_coeff,'-t','%s'%skew_coeff,'-r','%s'%skew_type,'-j','%s'%jacobian,'-k','%s'%fluctuation,\
-         '-w','%s'%nucleon_width, '-v', '%s'%constituent_width, '-m', '%s'%constituent_num, '-d','%s'%min_dist])
+         '-w','%s'%nucleon_width, '-v', '%s'%constituent_width, '-m', '%s'%constituent_num, '-d','%s'%min_dist,"--ncoll"])
     
         
 def get_multi_list_and_centrality_cut(path,dir_num,grid_max,grid_step,eta_max,eta_step,comment,cpuid):
@@ -182,7 +182,7 @@ if __name__ == '__main__':
 
     #the following parameter all need to be confirmed further************************************************
     reduced_thickness=0
-    beam_energy=8160
+    beam_energy=5020
     cross_section=7.25
 
     bmin=0.0
@@ -214,7 +214,6 @@ if __name__ == '__main__':
     dir_num=10
     cpuid=0
 
-    #if True:
     name=['projectile','target','num_of_event','reduced_thickness','beam_energy','cross_section',\
          'bmin','bmax','grid_max=','grid_step','eta_max','eta_step',\
          'mean_coeff','std_coeff','skew_coeff','skew_type','jacobian','fluctuation',\
