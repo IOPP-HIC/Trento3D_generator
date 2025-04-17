@@ -2,8 +2,8 @@
 
 
 rm -fr trento3d_subnucleon
-git clone --depth=1 https://github.com/Duke-QCD/trento3d-1.0.git  -b master trento3d_subnucleon
-commitHash="7affda6752318f6fdf148ba70413936453bb85cf"
+git clone --depth=1 https://github.com/xyw2016/trento3d_KW.git -b ncoll trento3d_subnucleon
+commitHash="d0e4bed9138616432db11eb52caa900e269b453c"
 cd trento3d_subnucleon 
 git checkout $commitHash
 rm -fr .git
